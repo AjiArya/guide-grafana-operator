@@ -101,3 +101,19 @@ Get the route
 ```bash
 oc get route
 ```
+
+
+# Add Thanos to Grafana Data Source
+1. Grafana > Configuration > Datasource > Add "data source"
+
+HTTP > URL > fill with URL HOST/PORT from `oc -n openshift-monitoring`
+
+Auth > Activate "Skip TLS Verify"
+
+Custom HTTP Headers > + Add header
+
+Header: Authorization
+
+Value: Bearer ${TOKEN}
+
+2. Save & Exit
