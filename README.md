@@ -91,3 +91,13 @@ Create object from the manifest
 ```bash
 oc create -f grafana-deploy.yaml
 ```
+
+Wait the deployment to finish
+```bash
+oc get pods -w
+```
+
+Get the route
+```bash
+oc get route
+```
